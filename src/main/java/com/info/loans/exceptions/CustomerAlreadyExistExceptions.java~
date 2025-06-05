@@ -1,0 +1,9 @@
+package com.info.accounts.exceptions;
+
+
+public class CustomerAlreadyExistExceptions extends RuntimeException {
+
+    public CustomerAlreadyExistExceptions(String message) {
+        super(message);
+    }
+}
