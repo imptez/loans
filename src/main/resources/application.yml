@@ -4,6 +4,10 @@ server:
         context-path: /loans
 
 spring:
+    application:
+        name: "loans"
+    profiles:
+        active: "prod"
     web:
         resource:
             static-location: classpath:/static/
@@ -25,5 +29,7 @@ spring:
             path: /h2-console
             settings:
                 web-allow-others: true
+    config:
+        import: "configserver:http://localhost:8071/config-server/"
 
 
